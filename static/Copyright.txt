@@ -1,0 +1,10 @@
+/*
+Gulp Examples by @rodrigo berlochi:
+ 
+* https://github.com/
+ 
+Version: <%= version %>
+Full source at 
+ 
+MIT License, https://github.com/shprink/gulp-examples/blob/master/LICENSE
+*/

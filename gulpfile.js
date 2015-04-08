@@ -2,12 +2,34 @@ var gulp = require('gulp');
 var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
+var jshint = require('gulp-jshint');
+var concat = require('gulp-concat');
+var fs = require('fs');
+var header = require("gulp-header");
+ 
+// functions
+ 
+// Get version using NodeJs file system
+var getVersion = function () {
+    return fs.readFileSync('./static/Version.txt');
+};
+ 
+// Get copyright using NodeJs file system
+var getCopyright = function () {
+    return fs.readFileSync('./static/Copyright.txt');
+};
 
+//main js task
 gulp.task('default-js', function() {
   // place code for your default task here
   
-  gulp.src('./js/*.js')
-	.pipe()
+  gulp.src('./js/development/*.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter())
+	.pipe(uglify())
+	.pipe(concat('concat.js'))
+	.pipe(header(getCopyright(), {version: getVersion() }))
+	.pipe(gulp.dest('./js/distribution'));
   
   /*gulp.src('./client/templates/*.jade')
   .pipe(jade())
