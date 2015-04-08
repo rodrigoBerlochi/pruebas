@@ -3,8 +3,11 @@ var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 
-gulp.task('default', function() {
+gulp.task('default-js', function() {
   // place code for your default task here
+  
+  gulp.src('./js/*.js')
+	.pipe()
   
   /*gulp.src('./client/templates/*.jade')
   .pipe(jade())
