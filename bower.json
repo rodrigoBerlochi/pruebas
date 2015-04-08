@@ -1,0 +1,18 @@
+{
+  "name": "rodrigo",
+  "version": "0.0.0",
+  "authors": [
+    "Rodrigo Berlochi <rodrigo.berlochi@razorfish.com>"
+  ],
+  "description": "project to learn things",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

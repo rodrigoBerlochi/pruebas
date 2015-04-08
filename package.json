@@ -1,0 +1,17 @@
+{
+  "name": "qwerty",
+  "version": "0.0.0",
+  "description": "Learning several things",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rodrigo berlochi",
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "gulp-uglify": "^1.1.0",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-usemin": "^0.3.11",
+    "gulp": "^3.8.11"
+  }
+}
